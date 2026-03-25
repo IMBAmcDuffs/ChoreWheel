@@ -1,0 +1,46 @@
+// This is a placeholder schema - actual schema would be created in build step
+// For now, we'll use a simple SQLite schema
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  isOnVacation Boolean @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  chores Chore[]
+}
+
+model Chore {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  difficulty  Int      @default(5) // 1-10 scale
+  frequency   String   // daily, weekly, biweekly, monthly
+  assignedTo  String?  // User ID
+  dueDate     DateTime
+  completedAt DateTime?
+  status      String   @default("pending") // pending, in-progress, completed
+  
+  user User? @relation(fields: [assignedTo], references: [id])
+  
+  @@index([dueDate])
+  @@index([status])
+}
+
+model RotationLog {
+  id        String   @id @default(cuid())
+  weekNumber Int
+  timestamp DateTime @default(now())
+  fairnessScore Float
+  assignments Json
+  
+  @@index([weekNumber])
+}
