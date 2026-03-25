@@ -1,2 +1,3 @@
 # ChoreWheel
-Next.js roommate chore management app with rotating chore wheel
+
+This is a Next.js application that serves as a roommate chore management system.
