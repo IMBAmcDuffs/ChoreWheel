@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  chores    Chore[]
+  
+  @@index([email])
+}
+
+model Chore {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  category    String   @default("kitchen")
+  status      String   @default("pending") // pending, assigned, completed
+  assigneeId  String?
+  assignee    User?    @relation("ChoreAssignee", fields: [assigneeId], references: [id])
+  dueDate     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  completedAt DateTime?
+  
+  @@index([status])
+  @@index([category])
+  @@index([assigneeId])
+}
+
+enum ChoreCategory {
+  KITCHEN
+  BATHROOM
+  LIVING_ROOM
+  BEDROOM
+  LAUNDRY
+  OUTDOOR
+  OTHER
+}
+
+enum ChoreStatus {
+  PENDING
+  ASSIGNED
+  COMPLETED
+}
