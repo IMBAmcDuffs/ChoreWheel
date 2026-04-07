@@ -1,0 +1,23 @@
+{
+  "name": "chorewheel",
+  "version": "1.0.0",
+  "description": "ChoreWheel - Fair chores for every roommate. A mobile-first landing page for roommate chore coordination.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve",
+    "dev": "npx serve",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "chore",
+    "roommate",
+    "landing-page",
+    "static-site",
+    "mobile-first"
+  ],
+  "author": "ChoreWheel Team",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
