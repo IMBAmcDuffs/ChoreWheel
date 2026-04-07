@@ -1,116 +1,80 @@
 # ChoreWheel
 
-A mobile-first landing page for ChoreWheel, a roommate chore coordination app focused on fair task rotation and accountability.
+Fair chores for every roommate. A mobile-first landing page for roommate chore coordination.
 
 ## Overview
 
-ChoreWheel addresses the inherent friction of shared living by providing a lightweight, fair-rotation solution designed specifically for small households and prospective roommates. The landing page serves as the entry point to the project, driving early interest and community engagement.
+ChoreWheel is a lightweight, fair-rotation solution designed specifically for small households and prospective roommates. It eliminates the "who did the dishes?" anxiety with a mobile-first experience that integrates seamlessly into daily life.
 
 ## Features
 
-- **Mobile-First Design**: Optimized for smartphone viewing with responsive breakpoints
-- **Lightweight Stack**: Plain HTML, CSS, and vanilla JavaScript — no frameworks or build tools
-- **Clear CTA**: Single "Follow the Project" button directing users to GitHub
-- **Accessibility Compliant**: WCAG 2.1 AA compliant with proper contrast ratios and keyboard navigation
-- **Zero Dependencies**: No external libraries or backend requirements
+- **Automatic Fair Rotation**: Equitable chore distribution without complexity
+- **Accountability Tracking**: Clear ownership of tasks
+- **Zero Setup Required**: Start immediately without account creation
 
-## Getting Started
+## How to Run Locally
 
-### Prerequisites
-
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Node.js (optional, for serving via `npx serve`)
-- Git (for cloning the repository)
-
-### Local Development
-
-1. **Clone the repository**:
+1. Clone the repository:
    ```bash
-   git clone https://github.com/IMBAmcDuffs/ChoreWheel.git
+   git clone <repository-url>
    cd ChoreWheel
    ```
 
-2. **Open in browser**:
-   Simply open `index.html` in your web browser. No build step required!
-
+2. Install dependencies (optional, for serving):
    ```bash
-   # On macOS/Linux
-   open index.html
-   
-   # On Windows
-   start index.html
+   npm install
    ```
 
-3. **Or use a static file server**:
+3. Start the local server:
    ```bash
-   # Using Python (built-in)
-   python -m http.server 8000
-   
-   # Using Node.js serve
-   npx serve
-   
-   # Using PHP
-   php -S localhost:8000
+   npm start
    ```
 
-   Then visit `http://localhost:8000` in your browser.
+4. Open your browser and navigate to `http://localhost:3000` (or the port shown in the terminal).
 
-## Project Structure
+Alternatively, you can simply open `index.html` directly in your browser without a server.
 
-```
-ChoreWheel/
-├── index.html          # Main landing page
-├── styles.css          # Mobile-first CSS styles
-├── script.js           # Vanilla JavaScript interactions
-├── README.md           # This file
-└── DEPLOY.md           # Deployment documentation
-```
+## Deployment Options
+
+- **GitHub Pages**: Push to the `main` branch and enable GitHub Pages in repository settings.
+- **Netlify**: Drag and drop the project folder to Netlify.
+- **Vercel**: Connect your GitHub repository to Vercel for automatic deployment.
 
 ## Tech Stack
 
-- **HTML5**: Semantic markup for accessibility
+- **HTML5**: Semantic structure
 - **CSS3**: Mobile-first responsive design with CSS Grid and Flexbox
-- **JavaScript (ES6+)**: Vanilla JavaScript for micro-interactions
-- **SVG**: Inline SVG icons for lightweight, scalable graphics
-
-## Deployment
-
-This project is designed for static hosting. Recommended platforms:
-
-- **GitHub Pages**: Free hosting for GitHub repositories
-- **Netlify**: Simple drag-and-drop deployment
-- **Vercel**: Automatic deployment from Git
-- **Cloudflare Pages**: Edge-network hosting
-
-### Deploy to GitHub Pages
-
-1. Enable GitHub Pages in repository settings
-2. Select "main" branch and root folder
-3. Your site will be live at `https://username.github.io/ChoreWheel`
-
-### Deploy to Netlify
-
-1. Connect your GitHub repository to Netlify
-2. Deploy automatically on every push
-3. Or drag-and-drop the project folder
+- **Vanilla JavaScript**: No external dependencies or frameworks
 
 ## Accessibility
 
 This project follows WCAG 2.1 AA guidelines:
 
-- **Contrast Ratios**: All text meets 4.5:1 minimum contrast
-- **Keyboard Navigation**: All interactive elements focusable via Tab
-- **Screen Reader Support**: Semantic HTML with proper ARIA labels
-- **Reduced Motion**: Respects `prefers-reduced-motion` preference
+- All text meets 4.5:1 contrast ratio
+- Semantic HTML with proper heading hierarchy
+- Focus states visible on interactive elements
+- Alt text on all SVG icons
+- Minimum 44x44px touch targets for mobile
+
+## Testing
+
+To validate the landing page locally:
+
+1. Start the server: `npm start`
+2. Open the page in your browser
+3. Test at different breakpoints:
+   - Mobile: 320px
+   - Tablet: 768px
+   - Desktop: 1024px
+4. Check accessibility:
+   - Use browser DevTools to verify focus states
+   - Test keyboard navigation with Tab key
+   - Verify contrast ratios using browser extensions
 
 ## License
 
-This project is open source and available under the MIT License.
+MIT
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit issues or pull requests via the [GitHub repository](https://github.com/IMBAmcDuffs/ChoreWheel).
-
-## Support
-
-For questions or feedback, please open an issue on GitHub or contact the project maintainers.
+This is a greenfield scaffold. Contributions are welcome! Please open an issue or PR for any improvements.

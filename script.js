@@ -1,38 +1,25 @@
+// ChoreWheel - Minimal vanilla JavaScript
+
 // Smooth scroll for anchor links
 const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
 anchorLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
-    const href = link.getAttribute('href');
-    if (href === '#') return;
-    
-    const target = document.querySelector(href);
-    if (target) {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href !== '#') {
       e.preventDefault();
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     }
   });
 });
 
-// Add subtle fade-in animation on page load
-window.addEventListener('load', () => {
-  const hero = document.querySelector('.hero');
-  if (hero) {
-    hero.style.opacity = '0';
-    hero.style.transform = 'translateY(20px)';
-    hero.style.transition = 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out';
-    
-    setTimeout(() => {
-      hero.style.opacity = '1';
-      hero.style.transform = 'translateY(0)';
-    }, 100);
-  }
-});
-
-// Feature cards fade-in on scroll
+// IntersectionObserver for fade-in animations
 const observerOptions = {
   root: null,
   rootMargin: '0px',
@@ -48,10 +35,22 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
+// Observe feature cards
 const featureCards = document.querySelectorAll('.feature-card');
 featureCards.forEach(card => {
   card.style.opacity = '0';
   card.style.transform = 'translateY(20px)';
   card.style.transition = 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out';
   observer.observe(card);
+});
+
+// Add focus trap for keyboard navigation (optional enhancement)
+const interactiveElements = document.querySelectorAll('a, button, [tabindex]');
+interactiveElements.forEach(element => {
+  element.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      this.click();
+    }
+  });
 });
