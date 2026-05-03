@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ChoreWheel Dashboard</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#91f78e",
+                    "secondary-fixed": "#c9e7f7",
+                    "surface-container-highest": "#dfe3e4",
+                    "secondary-fixed-dim": "#bbd9e9",
+                    "on-primary": "#f8f8ff",
+                    "on-tertiary-fixed-variant": "#00691a",
+                    "primary-container": "#68abff",
+                    "tertiary-dim": "#006118",
+                    "primary-fixed": "#68abff",
+                    "secondary-container": "#c9e7f7",
+                    "secondary": "#466370",
+                    "tertiary-fixed": "#91f78e",
+                    "on-error-container": "#6e0a12",
+                    "surface-tint": "#0060ad",
+                    "secondary-dim": "#3a5764",
+                    "primary-dim": "#005498",
+                    "on-background": "#2f3334",
+                    "primary-fixed-dim": "#599ef1",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#9c9d9d",
+                    "error-dim": "#67040d",
+                    "error": "#a83836",
+                    "on-tertiary-container": "#005e17",
+                    "on-secondary": "#f3faff",
+                    "surface-container-low": "#f2f4f4",
+                    "on-secondary-fixed-variant": "#435f6d",
+                    "surface-variant": "#dfe3e4",
+                    "on-surface-variant": "#5b6061",
+                    "surface-container-high": "#e6e9e9",
+                    "surface": "#f9f9f9",
+                    "surface-container": "#eceeee",
+                    "on-tertiary": "#eaffe2",
+                    "inverse-surface": "#0c0f0f",
+                    "on-primary-container": "#002b52",
+                    "on-tertiary-fixed": "#00480f",
+                    "primary": "#0060ad",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-fixed": "#000c1e",
+                    "on-error": "#fff7f6",
+                    "tertiary-fixed-dim": "#83e881",
+                    "error-container": "#fa746f",
+                    "outline": "#777b7c",
+                    "on-secondary-fixed": "#264350",
+                    "on-surface": "#2f3334",
+                    "on-primary-fixed-variant": "#003461",
+                    "inverse-primary": "#68abff",
+                    "on-secondary-container": "#395663",
+                    "tertiary": "#006f1d",
+                    "background": "#f9f9f9",
+                    "surface-dim": "#d7dbdb",
+                    "outline-variant": "#afb3b3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img alt="Family Member Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly person with a warm smile, soft natural lighting in a home setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBekGiN40ZwOtlErdfSSfelCpYRYLdOOqR7z5rnC4_GdlEytoqHC7CU8ZVvtFpa8Q-ezcxhgFViFuSLpCTaOQ4y7XyglMfUVGfCLKjJpG8AXnU0RUkk-2bvHzleOsmKkjv6lhs40P0n72ypgAKArwqbqPrDkpmDL3V5RBLWIUCxHjYI70juhIcrf_slD7tQYxWt3fUmI-d2pCuGt1nyf-tnGIgt94vw--B_HXjFS8BEcb_QQyeQhaw8KxabD6FeKta-dn9U8I8IhO-w"/>
+</div>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-blue-800 dark:text-blue-300 font-headline">ChoreWheel</h1>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-200/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="pt-24 pb-32 px-6 max-w-md mx-auto min-h-screen">
+<!-- Hero Section / Empty State Illustration -->
+<section class="mt-8 text-center">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-8 shadow-[0_12px_32px_rgba(47,51,52,0.06)]">
+<img alt="Clean happy home" class="w-full h-full object-cover" data-alt="Sun-drenched modern living room with soft beige linen textures, indoor plants, and a cozy aesthetic, bright and airy morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV51Fa3IyK_sypHhqpBbzbCAWCPyhPKtZ-9UwjJGB2PTZavjMa9qnpkY9JZ9wuQBxPhNkXF9qtPs4w-ipe8cBtdag9ntXildh8Uki2a7g17a7ubeREp2dPH0Zw55PMHZyVEkAqcQjx8tvdaiomiwZZSGd3Ps02mKvP1Is4gAXwiq5OkWtD2cZ3MBqWkoYPML_GN872SfkKI93xAm7Rzch_4S-3y57zXX5rru3Ky1s6jKvYLJehZSCwpyWVQW0WYeUOq4K3sDjMr9bB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-40"></div>
+</div>
+<h2 class="text-3xl font-extrabold text-on-surface tracking-tight mb-3">The house is quiet.</h2>
+<p class="text-lg text-on-surface-variant font-medium leading-relaxed px-4">Start a new rhythm today.</p>
+<!-- Primary CTA -->
+<div class="mt-10">
+<button class="w-full py-5 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full font-bold text-lg shadow-[0_8px_24px_rgba(0,96,173,0.25)] active:scale-95 transition-all duration-300">
+                    Add Your First Chore
+                </button>
+</div>
+</section>
+<!-- Quick Start Cards (Asymmetric Grid) -->
+<section class="mt-16">
+<h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-6 ml-1">Quick Start</h3>
+<div class="grid grid-cols-1 gap-4">
+<!-- Card 1 -->
+<div class="bg-surface-container-low rounded-xl p-5 flex items-center gap-5 active:scale-[0.98] transition-transform">
+<div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface">Invite a Housemate</h4>
+<p class="text-xs text-on-surface-variant font-medium">Better together</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low rounded-xl p-5 flex items-center gap-5 active:scale-[0.98] transition-transform">
+<div class="w-14 h-14 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface">Explore Rhythms</h4>
+<p class="text-xs text-on-surface-variant font-medium">Pre-made templates</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low rounded-xl p-5 flex items-center gap-5 active:scale-[0.98] transition-transform">
+<div class="w-14 h-14 rounded-full bg-slate-200/50 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface">Set Reminders</h4>
+<p class="text-xs text-on-surface-variant font-medium">Never miss a beat</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-slate-50/90 dark:bg-slate-900/90 backdrop-blur-2xl shadow-[0_-12px_32px_rgba(47,51,52,0.06)] rounded-t-[3rem]">
+<!-- Dashboard (Active) -->
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-100 rounded-full px-6 py-2 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined fill-icon" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-plus-jakarta text-[11px] font-semibold">Dashboard</span>
+</a>
+<!-- Tasks -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="checklist">checklist</span>
+<span class="font-plus-jakarta text-[11px] font-semibold">Tasks</span>
+</a>
+<!-- Family -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-plus-jakarta text-[11px] font-semibold">Family</span>
+</a>
+<!-- Rewards -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="workspace_premium">workspace_premium</span>
+<span class="font-plus-jakarta text-[11px] font-semibold">Rewards</span>
+</a>
+</nav>
+</body></html>

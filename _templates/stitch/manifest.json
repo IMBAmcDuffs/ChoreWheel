@@ -1,0 +1,16 @@
+{
+  "project_id": "14001975684050892748",
+  "screens": {
+    "desktop": {
+      "screenId": "de3f442b7a6a47538ac99a220fcd8bd7",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzE1NTEwN2Y1Njg5ODQ0NjZiNTc2Y2Y3ZjIwYjFhMWVlEgsSBxCC5ZSMnhwYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDAwMTk3NTY4NDA1MDg5Mjc0OA&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujKGVPk8uhFZpJhXO0bIZAB0z35TXmeLS5_BEZ00ts4UgUvm7sfkWyX37yh_thGneBix-Tm5oJi_Db8-l5BtJhbo8TdvurZTlvaUop2y9RsO30b8Sz3q0EN4LuhutZDsVnxvQB8Z7L8zfSFnxE_Lspc4Dwlay9m9uigQyVjxqturYfLiv2iJ8W4wnc0M0uJSs8S9AG4nXb8FZFAcMYzjnI2TS3zAP7jAOKG9d5iGFdFcZIJ4jj3OVbqLObu",
+      "deviceType": "desktop"
+    }
+  },
+  "theme": {},
+  "device_types": [
+    "desktop"
+  ],
+  "prompt_used": "Design a UI screen for: ChoreWheel - Mobile Empty-State Polish and Validation. Objective: Implement a small production-safe polish pass for the existing ChoreWheel app. Improve the primary dashboard empty-state experience on mobile and desktop, ensure the mobile navigation remains reliable, and verify lint, build, and existing tests pass. Success is a small reviewable PR with a working responsive experience and no regressions.. Design brief summary: Implement a small production-safe polish pass for the existing ChoreWheel app. Improve the primary dashboard empty-state experience on mobile and desktop, ensure the mobile navigation remains reliable, and verify lint, build, and existing tests pass. Success is a small reviewable PR with a working responsive experience and no regressions."
+}
